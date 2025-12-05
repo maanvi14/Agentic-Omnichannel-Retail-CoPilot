@@ -514,7 +514,7 @@ tools = [
 ]
 tools_by_name = {t.name: t for t in tools}
 
-llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0.2)
+llm = ChatGroq(model="llama-3.1-8b-instant", temperature=0.2)
 sales_agent_llm = llm.bind_tools(tools)
 
 
@@ -690,5 +690,6 @@ builder.add_edge("tool_node", "sales_agent")
 
 graph = builder.compile()
 print("LangGraph Retail Agent compiled ✔")
+
 
 
