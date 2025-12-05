@@ -9,28 +9,39 @@ import qrcode
 
 from langchain_core.messages import HumanMessage, AIMessage
 
-try:
-    from retail_agent_langgraph import (
-        graph,
-        CUSTOMERS,
-        PRODUCT_CATALOG,
-        INVENTORY,
-        pos_terminal_agent,
-    )
-except ImportError as e:
-        st.error(
-            "Failed to import `retail_agent_langgraph`. "
-            "Ensure it is in the working directory and all dependencies "
-            "(langgraph, langchain-core, langgraph, etc.) are installed."
-        )
-        raise e
-
 PRODUCT_URLS: Dict[str, str] = {
     "Nike Air Max 90 - Red": "https://www.nike.com/launch/t/air-max-90-1-white-university-red",
     "Nike Air Max 90 - Black": "https://www.nike.com/t/air-max-90-ltr-big-kids-shoes-1wzwJM/CD6864-028",
     "Nike Air Max 90 - White": "https://www.farfetch.com/in/shopping/women/nike-air-max-90-white-reptile-sneakers-item-20053304.aspx",
     "Nike React Infinity Run - Pink": "https://www.techwheels.in/?d=60741000031910",
 }
+
+graph = None
+CUSTOMERS: Dict[str, Any] = {}
+PRODUCT_CATALOG: List[Dict[str, Any]] = []
+INVENTORY: Dict[str, Dict[str, int]] = {}
+pos_terminal_agent = None
+
+
+def load_backend() -> None:
+    global graph, CUSTOMERS, PRODUCT_CATALOG, INVENTORY, pos_terminal_agent
+    if graph is not None:
+        return
+    try:
+        import retail_agent_langgraph as backend
+    except ImportError:
+        st.error(
+            "Failed to import `retail_agent_langgraph`. "
+            "Ensure it is in the working directory and all dependencies "
+            "(langgraph, langchain-core, langchain-groq, etc.) are installed."
+        )
+        st.stop()
+    graph = backend.graph
+    CUSTOMERS = backend.CUSTOMERS
+    PRODUCT_CATALOG = backend.PRODUCT_CATALOG
+    INVENTORY = backend.INVENTORY
+    pos_terminal_agent = backend.pos_terminal_agent
+
 
 st.set_page_config(
     page_title="Agentic Omnichannel Retail CoPilot",
@@ -381,9 +392,18 @@ with st.sidebar:
         type="password",
         help="Used by the LangGraph / Groq-powered retail agent.",
     )
+
     if groq_key:
         st.session_state["GROQ_API_KEY"] = groq_key
         os.environ["GROQ_API_KEY"] = groq_key
+    elif "GROQ_API_KEY" in st.session_state:
+        os.environ["GROQ_API_KEY"] = st.session_state["GROQ_API_KEY"]
+
+    if not os.environ.get("GROQ_API_KEY"):
+        st.warning("Enter your Groq API key in the sidebar to start the demo.")
+        st.stop()
+
+    load_backend()
 
     channel = st.selectbox(
         "Channel",
@@ -764,3 +784,5 @@ with tab3:
     st.dataframe(pd.DataFrame(demand_rows))
 
     st.markdown("</div>", unsafe_allow_html=True)
+
+
