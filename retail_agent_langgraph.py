@@ -13,13 +13,7 @@ from langchain_core.messages import (
     ToolMessage,
 )
 from langchain_core.tools import tool
-
-
-
-
-
 # 2. LangGraph Shared State
-
 class AgentState(TypedDict):
     messages: Annotated[list, add_messages]
     channel: str
@@ -690,6 +684,7 @@ builder.add_edge("tool_node", "sales_agent")
 
 graph = builder.compile()
 print("LangGraph Retail Agent compiled ✔")
+
 
 
 
