@@ -1,7 +1,3 @@
-# ============================================================
-# retail_agent_langgraph.py  (FINAL CLEAN VERSION)
-# ============================================================
-
 import os
 from typing import Annotated, TypedDict, Literal
 from datetime import datetime
@@ -19,9 +15,7 @@ from langchain_core.messages import (
 from langchain_core.tools import tool
 
 
-# 1. API KEY
 
-os.environ["GROQ_API_KEY"] = ""   # <--- Replace with real key
 
 
 # 2. LangGraph Shared State
@@ -524,9 +518,9 @@ llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0.2)
 sales_agent_llm = llm.bind_tools(tools)
 
 
-# ------------------------------------------------------------
-# 9. SYSTEM PROMPT
-# ------------------------------------------------------------
+
+# 9. SALES AGENT PROMPT
+
 SALES_SYSTEM_PROMPT = """
 You are an Omnichannel AI Sales Agent for a premium Indian fashion & footwear retail brand (similar to ABFRL).
 You emulate a top retail stylist — warm, friendly, persuasive, knowledgeable, and highly personalized.
@@ -696,3 +690,5 @@ builder.add_edge("tool_node", "sales_agent")
 
 graph = builder.compile()
 print("LangGraph Retail Agent compiled ✔")
+
+
