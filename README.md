@@ -5,8 +5,6 @@ An Agentic AI Sales Assistant for Indian Fashion Retail — enabling seamless sh
 </p>
 
 ---
-# 🛍️ Omnichannel Retail AI Agent
-
 [![LangGraph](https://img.shields.io/badge/Agent_Framework-LangGraph-0A66C2?logo=dependabot)](https://langchain.com/langgraph)
 [![LangChain](https://img.shields.io/badge/Made%20with-LangChain-ff69b4?logo=langchain)](https://www.langchain.com/)
 [![LLM](https://img.shields.io/badge/LLaMA-3.3%20via%20Groq-orange?logo=meta)](https://groq.com/)
