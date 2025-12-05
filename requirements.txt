@@ -1,0 +1,10 @@
+streamlit
+langgraph
+langchain-core
+langchain-community
+langchain-groq
+pandas
+requests
+python-dotenv
+qrcode[pil]
+pillow
