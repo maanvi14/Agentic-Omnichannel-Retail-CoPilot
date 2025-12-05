@@ -1,5 +1,19 @@
-## Agentic Omnichannel Retail CoPilot
-AI-powered Sales Agent | Built with Streamlit, LangGraph, LangChain, Groq API, Multi-Agent Tooling
+<h1 align="center">🛍️ Omnichannel Retail AI Agent using LangGraph</h1>
+
+<p align="center">
+An Agentic AI Sales Assistant for Indian Fashion Retail — enabling seamless shopping across Web, Mobile App, WhatsApp, and In-Store Kiosks, with continuous context using LangGraph.
+</p>
+
+---
+# 🛍️ Omnichannel Retail AI Agent
+
+[![LangGraph](https://img.shields.io/badge/Agent_Framework-LangGraph-0A66C2?logo=dependabot)](https://langchain.com/langgraph)
+[![LangChain](https://img.shields.io/badge/Made%20with-LangChain-ff69b4?logo=langchain)](https://www.langchain.com/)
+[![LLM](https://img.shields.io/badge/LLaMA-3.3%20via%20Groq-orange?logo=meta)](https://groq.com/)
+[![ChatGroq](https://img.shields.io/badge/LLM_API-Groq-blue?logo=groq)](https://groq.com/)
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-FF4B4B?logo=streamlit)](https://streamlit.io/)
+![Design](https://img.shields.io/badge/Design-Figma/Canva-EA4C89?logo=figma)
 
 ## 🚀 Overview
 
