@@ -15,7 +15,7 @@ An Agentic AI Sales Assistant for Indian Fashion Retail — enabling seamless sh
 
 ## 🚀 Overview
 
-Agentic Omnichannel Retail CoPilot is an AI-driven Sales Agent that delivers a continuous, unified retail experience across mobile apps, websites, WhatsApp, and in-store kiosks. Built with LangGraph, Groq-accelerated Llama 3, and modular Worker Agents, it handles product discovery, real-time inventory checks, loyalty offers, payments, fulfilment, QR-based in-store reservations, and post-purchase support — all within a single shared session.
+Agentic Omnichannel Retail CoPilot is an AI-driven Sales Agent that delivers a continuous, unified retail experience across mobile apps, websites, WhatsApp, and in-store kiosks. Built with LangGraph, Groq-accelerated Llama 3, and modular Worker Agents, it handles product discovery, real-time inventory checks, loyalty offers, payments, fulfilment, QR-based in-store reservations, and post-purchase support - all within a single shared session.
 
 The system manages edge cases intelligently, including stock issues and failed card payments, by triggering automatic UPI/COD fallback. The prototype demonstrates a seamless end-to-end journey: search online → reserve via QR → continue in-store → complete purchase → recover from payment failure → receive WhatsApp confirmation. Every step continues the same conversation with zero repeated inputs.
 
