@@ -23,3 +23,13 @@ Built with a modular multi-agent architecture, the CoPilot is scalable, extensib
 
 Deployed Link - https://agentic-omnichannel-retail-copilot.streamlit.app/
 
+<img width="1600" height="702" alt="image" src="https://github.com/user-attachments/assets/6cd93927-9201-4e1c-948b-fc5422ff08f5" />
+<img width="1600" height="718" alt="image" src="https://github.com/user-attachments/assets/ae2cedc7-f1a8-4cbf-946f-1927ee74b208" />
+<img width="1600" height="731" alt="image" src="https://github.com/user-attachments/assets/674e8f70-e2dd-4862-9c75-c5a9d1c7ee8c" />
+<img width="1600" height="712" alt="image" src="https://github.com/user-attachments/assets/93c611b4-7538-4da9-a1b6-3df8a70dc599" />
+<img width="1600" height="696" alt="image" src="https://github.com/user-attachments/assets/3fc28fbe-27f3-40d8-9b17-05b350d6cc3d" />
+
+
+
+
+
