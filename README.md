@@ -1,7 +1,7 @@
 <h1 align="center">🛍️ Omnichannel Retail AI Agent using LangGraph</h1>
 
 <p align="center">
-An Agentic AI Sales Assistant for Indian Fashion Retail — enabling seamless shopping across Web, Mobile App, WhatsApp, and In-Store Kiosks, with continuous context using LangGraph.
+An Agentic AI Sales Assistant for Indian Fashion Retail - enabling seamless shopping across Web, Mobile App, WhatsApp, and In-Store Kiosks, with continuous context using LangGraph.
 </p>
 
 ---
